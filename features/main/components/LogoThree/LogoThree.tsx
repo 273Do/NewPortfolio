@@ -1,9 +1,8 @@
 import { ModeToggle } from "@/components/mode-toggle";
-import React from "react";
 
 const LogoThree = () => {
   return (
-    <div className="bg-background size-full rounded-lg">
+    <div className="size-full rounded-lg bg-background">
       LogoThree
       <ModeToggle />
     </div>

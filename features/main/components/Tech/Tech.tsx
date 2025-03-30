@@ -1,7 +1,5 @@
-import React from "react";
-
 const Tech = () => {
-  return <div className="bg-background size-full rounded-lg">Tech</div>;
+  return <div className="size-full rounded-lg bg-background">Tech</div>;
 };
 
 export default Tech;

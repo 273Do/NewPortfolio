@@ -1,10 +1,8 @@
-import React from "react";
-
 const GitHubStatus = () => {
   return (
-    <div className="size-full flex gap-2">
-      <div className="bg-background w-4/5 rounded-lg">Trophy</div>
-      <div className="bg-background aspect-square rounded-lg">Calender</div>
+    <div className="flex size-full gap-2">
+      <div className="w-4/5 rounded-lg bg-background">Trophy</div>
+      <div className="aspect-square rounded-lg bg-background">Calender</div>
     </div>
   );
 };

@@ -1,5 +1,3 @@
-import { ModeToggle } from "@/components/mode-toggle";
-import { Button } from "@/components/ui/button";
 import FAQ from "@/features/main/components/FAQ/FAQ";
 import GitHubStatus from "@/features/main/components/GitHubStatus/GitHubStatus";
 import Information from "@/features/main/components/Information/Information";
@@ -17,23 +15,23 @@ export default function Home() {
     //   <div className="h-5 w-5 bg-primary-foreground" />
     // </div>
     // MEMO: m-1,p-1を動的に変更
-    <div className="am-1 full flex items-center flex-col justify-center">
-      <div className="ap-1 bg-blue-800 w-full xl:w-[1280px] h-svh xl:h-[960px]">
+    <div className="am-1 full flex flex-col items-center justify-center">
+      <div className="ap-1 h-svh w-full bg-blue-800 xl:h-[960px] xl:w-[1280px]">
         <LogoThree />
       </div>
-      <div className="p-1 bg-green-500 w-full xl:w-[1280px] h-[400px]">
+      <div className="h-[400px] w-full bg-green-500 p-1 xl:w-[1280px]">
         <Information />
       </div>
-      <div className="p-1 bg-blue-800 w-full xl:w-[1280px] h-64">
+      <div className="h-64 w-full bg-blue-800 p-1 xl:w-[1280px]">
         <GitHubStatus />
       </div>
-      <div className="p-1 bg-green-500 w-full xl:w-[1280px] h-[600px]">
+      <div className="h-[600px] w-full bg-green-500 p-1 xl:w-[1280px]">
         <Tech />
       </div>
-      <div className="p-1 bg-blue-800 w-full xl:w-[1280px] h-52">
+      <div className="h-52 w-full bg-blue-800 p-1 xl:w-[1280px]">
         <Item />
       </div>
-      <div className="p-1 bg-green-500 w-full xl:w-[1280px] h-80">
+      <div className="h-80 w-full bg-green-500 p-1 xl:w-[1280px]">
         <FAQ />
       </div>
     </div>

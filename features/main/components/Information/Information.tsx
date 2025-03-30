@@ -1,10 +1,8 @@
-import React from "react";
-
 const Information = () => {
   return (
-    <div className="size-full flex gap-2">
-      <div className="bg-background w-1/2 rounded-lg">Notice</div>
-      <div className="bg-background w-1/2 rounded-lg">Card</div>
+    <div className="flex size-full gap-2">
+      <div className="w-1/2 rounded-lg bg-background">Notice</div>
+      <div className="w-1/2 rounded-lg bg-background">Card</div>
     </div>
   );
 };
