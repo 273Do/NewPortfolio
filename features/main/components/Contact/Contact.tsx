@@ -3,7 +3,7 @@ const Contact = () => {
     <div className="m-4 w-full text-right font-sans font-semibold text-xl">
       <div>
         <p className="text-muted-foreground">Contact</p>
-        <p className="text-4xl">273dodev@gmail.com</p>
+        <p className="text-6xl">273dodev@gmail.com</p>
         <p className="text-muted-foreground text-sm">
           XやDIscordのDMでもお待ちしています
         </p>

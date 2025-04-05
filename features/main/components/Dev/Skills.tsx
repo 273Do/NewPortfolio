@@ -1,12 +1,13 @@
+import Marquee from "./Marquee";
+
 const Skills = () => {
   return (
-    <div className="w-full flex-row gap-4">
-      <div className="flex items-center justify-between">
-        <p className="mb-1">Tech Name</p>
-        <div className="h-1 w-30 bg-muted-foreground" />
-      </div>
-      <div className="h-52 w-full border-1 border-muted-foreground">
-        matter.js
+    <div className="m-4 w-full font-sans font-semibold text-xl">
+      <p className="mb-4 text-7xl opacity-80">Skills</p>
+      <div className="flex flex-col gap-6">
+        <Marquee title="Language" />
+        <Marquee title="FW / Lib" />
+        <Marquee title="Tool" />
       </div>
     </div>
   );
