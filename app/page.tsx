@@ -1,5 +1,6 @@
 import Contact from "@/features/main/components/Contact/Contact";
 import Contribution from "@/features/main/components/Contribution/Contribution";
+import FAQ from "@/features/main/components/FAQ/FAQ";
 import Profile from "@/features/main/components/Profile/Profile";
 import Skills from "@/features/main/components/Skills/Skills";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <Profile />
         <Skills />
         <Contribution />
+        <FAQ />
         <Contact />
       </div>
     </div>
