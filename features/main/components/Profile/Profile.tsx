@@ -10,12 +10,11 @@ const Profile = () => {
         <div className="flex flex-col gap-2">
           <Image
             src={MyImg}
-            className="grayscale min-w-64"
+            className="grayscale min-w-64 border-1 border-muted-foreground p-3"
             alt="myimg"
             width={400}
             height={100}
           />
-          {/* <p className="text-sm font-mono opacity-80">Links</p> */}
         </div>
         <div>
           <div>
@@ -27,9 +26,6 @@ const Profile = () => {
               Webなどのソフトウェア開発を中心に、趣味でものづくりを楽しんでいる人。また、サイクリングやキャンプなどのアウトドア、ピアノも楽しんでいる。
               現在はWeb、スマホアプリを幅広く開発している企業で従事している。
             </p>
-            {/* <p>
-              現在はWeb、スマホアプリを幅広く開発している企業で従事している。
-            </p> */}
           </div>
         </div>
       </div>
