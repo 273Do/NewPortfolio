@@ -15,7 +15,7 @@ const Profile = () => {
             width={300}
             height={100}
           />
-          <div className="flex w-full flex-col gap-10 max-w-lg">
+          <div className="flex w-full max-w-lg flex-col gap-10">
             <div>
               <div>
                 <p className="h-full text-6xl">273*</p>
