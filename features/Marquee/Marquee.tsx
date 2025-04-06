@@ -9,7 +9,8 @@ import { CircleX } from "lucide-react";
 import { useState } from "react";
 
 interface TechIconData {
-  name: string;
+  tool_name: string;
+  icon_name: string;
   level: number;
 }
 
@@ -18,7 +19,8 @@ const MarqueeWidget = ({
   techData,
 }: { title: string; techData: TechIconData[] }) => {
   const [techItem, setTehItem] = useState<TechIconData>({
-    name: "name",
+    tool_name: "Tech Name",
+    icon_name: "",
     level: 0,
   });
 
@@ -28,8 +30,7 @@ const MarqueeWidget = ({
         <div className="flex items-baseline justify-between">
           <p className="text-2xl">{title}</p>
           <div className="flex flex-row items-center gap-2">
-            <p className="font-mono text-sm ">{techItem.name}</p>
-            {/* <div className="h-1 w-30 bg-muted-foreground" /> */}
+            <p className="font-mono text-sm ">{techItem.tool_name}</p>
             <Slider
               defaultValue={[techItem.level]}
               value={[techItem.level]}
@@ -43,17 +44,17 @@ const MarqueeWidget = ({
         <Marquee
           gradient
           gradientColor="var(--background)"
-          className="text-muted-foreground py-3 items-center"
+          className="items-center py-3 text-muted-foreground"
           loop={0}
         >
           {techData.map((icon: TechIconData) => {
             const IconComponent = (
               Icons as unknown as Record<string, React.ComponentType>
-            )[`Si${icon.name}`];
+            )[`Si${icon.icon_name}`];
 
             if (typeof IconComponent === "undefined")
               return (
-                <div key={icon.name} className="px-3">
+                <div key={icon.tool_name} className="px-3">
                   <Slot className="h-10 w-full">
                     <CircleX color="red" />
                   </Slot>
@@ -62,12 +63,12 @@ const MarqueeWidget = ({
             return (
               // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
               <div
-                key={icon.name}
+                key={icon.tool_name}
                 className="px-3"
                 onClick={() => setTehItem(icon)}
               >
                 <Slot
-                  className={`${icon.name === techItem.name ? "text-primary scale-120" : ""} duration-200 h-10 hover:cursor-pointer hover:scale-120 w-full`}
+                  className={`${icon.tool_name === techItem.tool_name ? "scale-120 text-primary" : ""} h-10 w-full duration-200 hover:scale-120 hover:cursor-pointer`}
                 >
                   <IconComponent />
                 </Slot>

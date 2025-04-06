@@ -1,11 +1,11 @@
 import MarqueeWidget from "../../../Marquee/Marquee";
 
 const techData = [
-  { name: "Typescript", level: 4 },
-  { name: "Javascript", level: 1 },
-  { name: "React", level: 2 },
-  { name: "Nextdotjs", level: 5 },
-  { name: "Tailwindcss", level: 3 },
+  { tool_name: "Typescript", icon_name: "Typescript", level: 4 },
+  { tool_name: "Javascript", icon_name: "Javascript", level: 1 },
+  { tool_name: "React", icon_name: "React", level: 2 },
+  { tool_name: "Next.js", icon_name: "Nextdotjs", level: 5 },
+  { tool_name: "TailwindCSS", icon_name: "Tailwindcss", level: 3 },
 ];
 
 const Skills = () => {
