@@ -120,3 +120,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.icon_light {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(0.05);
+}

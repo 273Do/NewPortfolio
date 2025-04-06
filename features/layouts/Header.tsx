@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 z-50 w-full border-border/40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-4 flex h-14 items-center justify-between">
+      <div className="mx-4 flex h-10 items-center justify-between">
         <Link href="/" title="card">
           <Image
             src={siteLogo}
