@@ -6,12 +6,12 @@ const Contribution = () => {
   return (
     <div className="m-4 w-full font-sans font-semibold text-xl">
       <p className="mb-4 text-7xl opacity-80">Contribution</p>
-      <div className="flex items-start justify-between">
-        <div className="flex items-baseline gap-2">
+      <div className="flex items-end justify-between gap-4">
+        <GitCalendar />
+        <div className="items-baseline text-end gap-2">
           <p className="text-6xl opacity-20">209</p>
           <p>in {this_year}</p>
         </div>
-        <GitCalendar />
       </div>
     </div>
   );

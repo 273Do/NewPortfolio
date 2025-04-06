@@ -44,6 +44,7 @@ const MarqueeWidget = ({
         <Marquee
           gradient
           gradientColor="var(--background)"
+          pauseOnHover
           className="items-center py-3 text-muted-foreground"
           loop={0}
         >
