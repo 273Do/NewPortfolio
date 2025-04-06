@@ -8,7 +8,7 @@ interface Activity {
   level: 0 | 1 | 2 | 3 | 4;
 }
 
-const selectLastSevenWeeks = (contributions: Array<Activity>) => {
+const _selectLastSevenWeeks = (contributions: Array<Activity>) => {
   const today = new Date();
   const sevenWeeksAgo = new Date(today.getTime() - 6 * 7 * 24 * 60 * 60 * 1000); // 7週間前の日付
 
@@ -26,15 +26,15 @@ const GitCalendar = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="border p-4 rounded-lg">
-      <div className="hidden sm:block">
+    <div>
+      <div className="hidden font-mono sm:block">
         <GitHubCalendar
           username="273Do"
           // transformData={selectLastSevenWeeks}
           blockMargin={7}
           blockSize={13}
-          hideColorLegend={true}
-          hideMonthLabels={true}
+          hideColorLegend={false}
+          hideMonthLabels={false}
           hideTotalCount={true}
           loading={false}
           theme={explicitTheme}
