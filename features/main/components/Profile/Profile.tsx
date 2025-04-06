@@ -10,12 +10,12 @@ const Profile = () => {
         <div className="flex items-start gap-6">
           <Image
             src={MyImg}
-            className="aspect-square min-w-72 grayscale"
+            className="aspect-square min-w-72 grayscale duration-400 hover:grayscale-0"
             alt="myimg"
             width={300}
             height={100}
           />
-          <div className="flex w-full flex-col gap-10 max-w-lg">
+          <div className="flex w-full max-w-lg flex-col gap-10">
             <div>
               <div>
                 <p className="h-full text-6xl">273*</p>

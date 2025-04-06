@@ -1,6 +1,8 @@
 import Contact from "@/features/main/components/Contact/Contact";
-import Skills from "@/features/main/components/Dev/Skills";
+import Contribution from "@/features/main/components/Contribution/Contribution";
+import FAQ from "@/features/main/components/FAQ/FAQ";
 import Profile from "@/features/main/components/Profile/Profile";
+import Skills from "@/features/main/components/Skills/Skills";
 
 export default function Home() {
   return (
@@ -11,7 +13,8 @@ export default function Home() {
       <div className="flex w-full max-w-[1440px] flex-col items-center gap-10 px-4">
         <Profile />
         <Skills />
-        {/* <FAQ /> */}
+        <Contribution />
+        <FAQ />
         <Contact />
       </div>
     </div>
