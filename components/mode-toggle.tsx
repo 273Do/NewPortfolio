@@ -11,13 +11,13 @@ export function ModeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      className="cursor-pointer"
+      className="aspect-square cursor-pointer "
       onClick={() => setTheme(`${theme === "dark" ? "light" : "dark"}`)}
     >
       {theme === "dark" ? (
-        <Sun className="size-[1.2rem]" />
+        <Sun className="size-[1rem]" />
       ) : (
-        <Moon className="size-[1.2rem]" />
+        <Moon className="size-[1rem]" />
       )}
     </Button>
   );

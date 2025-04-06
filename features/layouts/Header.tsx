@@ -14,24 +14,52 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 z-50 w-full border-border/40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-4 flex h-10 items-center justify-between">
-        <Link href="/" title="card">
-          <Image
-            src={siteLogo}
-            width={70}
-            height={70}
-            alt="siteLogo"
-            className={`${
-              theme === "light" && "icon_light"
-            } duration-150 hover:scale-95`}
-          />
-        </Link>
-        <nav>
-          <Button variant="ghost">
-            <Languages />
-          </Button>
-          <ModeToggle />
-        </nav>
+      <div className="mt-0.5 flex h-11 w-full items-center justify-center">
+        <div className="mx-4 flex w-full max-w-[1440px] items-center justify-between">
+          <Link href="/">
+            <Image
+              src={siteLogo}
+              width={70}
+              height={70}
+              alt="siteLogo"
+              className={`${
+                theme === "light" && "icon_light"
+              } duration-200 hover:scale-95`}
+            />
+          </Link>
+          <nav className="flex gap-4 font-mono font-semibold text-xs">
+            <Link
+              href="/"
+              className="opacity-70 duration-200 hover:opacity-100"
+            >
+              Works
+            </Link>
+            <Link
+              href="/"
+              className="opacity-70 duration-200 hover:opacity-100"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/"
+              className="opacity-70 duration-200 hover:opacity-100"
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/"
+              className="opacity-70 duration-200 hover:opacity-100"
+            >
+              Movies
+            </Link>
+          </nav>
+          <nav>
+            <Button variant="ghost" size="icon" className="cursor-pointer">
+              <Languages className="size-[1rem]" />
+            </Button>
+            <ModeToggle />
+          </nav>
+        </div>
       </div>
     </div>
   );
