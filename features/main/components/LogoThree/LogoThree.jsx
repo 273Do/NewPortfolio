@@ -23,7 +23,7 @@ import * as THREE from "three";
 useGLTF.preload("/273do_logo.glb");
 
 const accents = ["#4d4d4d", "#20ffa0", "#ff4060", "#ffcc00"];
-const shuffle = (accent = 0) => [
+const shuffle = (_accent = 0) => [
   // { color: "#7e7e7e", roughness: 0.1 },
   // { color: "#7e7e7e", roughness: 0.75 },
   // { color: "#7e7e7e", roughness: 0.25 },
@@ -37,7 +37,7 @@ const shuffle = (accent = 0) => [
 
 // Main scene component
 function Scene() {
-  const [accent, click] = useReducer((state) => ++state % accents.length, 0);
+  const [accent, _click] = useReducer((state) => ++state % accents.length, 0);
   const connectors = useMemo(() => shuffle(accent), [accent]);
   const { theme } = useTheme();
   const glass_obj = 2;
@@ -129,7 +129,7 @@ function Scene() {
 // Main export component
 export default function LogoThree(props) {
   return (
-    <div className="w-full h-full fixed">
+    <div className="fixed h-full w-full">
       <Canvas
         shadows
         dpr={[1, 1.5]}
@@ -165,7 +165,7 @@ function Connector({
   const api = useRef();
   const pos = useMemo(() => position || [r(10), r(10), r(10)], [position]);
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (!api.current) return;
 
     delta = Math.min(0.1, delta);
@@ -262,8 +262,8 @@ function Model({ children, color = "white", roughness = 0, ...props }) {
     );
   }
 
-  useFrame((state, delta) => {
-    if (ref.current && ref.current.material) {
+  useFrame((_state, delta) => {
+    if (ref.current?.material) {
       easing.dampC(ref.current.material.color, color, 0.2, delta);
     }
   });

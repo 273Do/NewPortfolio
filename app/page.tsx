@@ -7,10 +7,10 @@ import Skills from "@/features/main/components/Skills/Skills";
 
 export default function Home() {
   return (
-    <div className="font-sans flex flex-col items-center justify-center">
-      <div className="h-svh w-full relative">
+    <div className="flex flex-col items-center justify-center font-sans">
+      <div className="relative h-svh w-full">
         {/* 3Dコンテンツ */}
-        <div className="absolute inset-0 w-full h-full z-0">
+        <div className="absolute inset-0 z-0 h-full w-full">
           <LogoThree />
         </div>
 
@@ -24,17 +24,20 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className="absolute ax-w-[1440px]  inset-0 h-full z-10 pointer-events-none flex items-start justify-start">
-          <div className="max-w-[1440px] w-full mx-auto">
-            <div className="text-9xl font-semibold">
-              <p>Hi</p>
+        <div className="pointer-events-none absolute inset-0 z-10 flex h-full w-full items-start justify-start px-4">
+          <div className="mx-auto w-full max-w-[1440px]">
+            <div className="font-mono text-sm">
+              <div className="h-11" />
+              <p>Web / Mobile App Develop</p>
+              <p>Design</p>
+              <p>Sensor Analysis</p>
             </div>
           </div>
         </div>
         {/* オーバーレイテキスト - 左下に配置 */}
-        <div className="px-4 absolute inset-0 w-full h-full z-10 pointer-events-none flex items-end justify-start">
-          <div className="max-w-[1440px] w-full mx-auto">
-            <div className="text-9xl font-semibold">
+        <div className="pointer-events-none absolute inset-0 z-10 flex h-full w-full items-end justify-start px-4">
+          <div className="mx-auto w-full max-w-[1440px]">
+            <div className="font-semibold text-9xl">
               <p>WELCOME TO</p>
               <p>273*</p>
               <p>PORTFOLIO</p>
@@ -43,8 +46,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="border-t bg-background z-40 w-full flex flex-col items-center justify-center px-4">
-        <div className="bg-background z-40 flex w-full max-w-[1440px] flex-col items-center gap-10">
+      <div className="z-40 flex w-full flex-col items-center justify-center border-t bg-background px-4">
+        <div className="z-40 flex w-full max-w-[1440px] flex-col items-center gap-10 bg-background">
           <Profile />
           <Skills />
           <Contribution />
